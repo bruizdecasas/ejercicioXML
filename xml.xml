@@ -1,0 +1,120 @@
+<biblioteca xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation= "biblioteca.xsd">
+  <documentos>
+    <libros id="L-0000">
+        <libro tipo_clase="novela" numero_paginas="">
+           <titulo_libro></titulo_libro>
+           <capitulos>
+               <capitulo numero_paginas="0">
+                   <titulo_capítulo></título_capítulo>
+                   <contenido_capítulo enlace=""></contenido_capitulo> 
+                </capitulo>
+            </capitulos>
+           <indice_libro></indice_libro>
+           <sinopsis></sinopsis>
+        </libro>
+        <libro tipo_clase="infantil" numero_paginas="0">
+            <titulo_libro></titulo_libro>
+            <capitulos>
+                <capitulo numero_paginas="0">
+                    <titulo_capitulo></titulo_capitulo>
+                    <contenido_capitulo enlace=""></contenido_capitulo> 
+                 </capitulo>
+             </capitulos>
+            <indice_libro></indice_libro>
+            <sinopsis></sinopsis>
+        </libro>
+        <libro tipo_clase="didactico" numero_paginas="0">
+            <titulo_libro></titulo_libro>
+            <capitulos>
+                <capitulo numero_paginas="0">
+                    <titulo_capitulo></titulo_capitulo>
+                    <contenido_capitulo enlace=""></contenido_capitulo> 
+                 </capitulo>
+             </capitulos>
+            <indice_libro></indice_libro>
+            <sinopsis></sinopsis>
+        </libro>
+    </libros>
+    <revistas id="R000">
+        <revista tipo_clase="informatica" numero_paginas="0">
+            <titulo_revista></titulo_revista>
+            <numero></numero>
+            <indice_revista></indice_revista>
+            <secciones_revista>
+                <seccion_revista numero_paginas="0">
+                    <contenido_revista enlace=""></contenido_revista>
+                </seccion_revista>
+            </secciones_revista>
+        </revista> 
+        <revista tipo_clase="corazon" numero_paginas="0">
+            <titulo_revista></titulo_revista>
+            <numero></numero>
+            <indice_revista></indice_revista>
+            <secciones_revista>
+                <seccion_revista numero_paginas="0">
+                    <contenido_revista enlace=""></contenido_revista>
+                </sección_revista>
+            </secciones_revista>
+        </revista>
+        <revista tipo_clase="coches" numero_paginas="0">
+            <titulo_revista></titulo_revista>
+            <numero></numero>
+            <indice_revista></indice_revista>
+            <secciones_revista>
+                <seccion_revista numero_paginas="0">
+                    <contenido_revista enlace=""></contenido_revista>
+                </seccion_revista>
+            </secciones_revista>
+        </revista>
+        <revista tipo_clase="investigacion" numero_paginas="0">
+            <titulo_revista></titulo_revista>
+            <numero></numero>
+            <indice_revista></indice_revista>
+            <secciones_revista>
+                <seccion_revista numero_paginas="0">
+                    <contenido_revista enlace=""></contenido_revista>
+                </seccion_revista>
+            </secciones_revista>
+        </revista>
+        <revista tipo_clase="otras" numero_paginas="0">
+            <titulo_revista></titulo_revista>
+            <numero></numero>
+            <indice_revista></indice_revista>
+            <secciones_revista>
+                <seccion_revista numero_paginas="0">
+                    <contenido_revista enlace=""></contenido_revista>
+                </seccion_revista>
+            </secciones_revista>
+        </revista>
+    </revistas>
+    <periodicos id="P-0000">
+        <periodico tipo_clase="nacional" fecha_publicacion="">
+            <secciones_periodico>
+                <seccion_periodico tipo_seccion="opinion">
+                    <articulo autor=""></articulo>
+                    <contenido_periodico informacion=""></contenido_periodico>
+                </seccion_periodico>
+            </secciones_periodico>
+            <indice_periodico></indice_periodico>
+        </periodico>
+         <periodico tipo_clase="nacional" fecha_publicacion="">
+            <secciones_periodico>
+                <seccion_periodico tipo_seccion="deportes">
+                    <articulo autor=""></articulo>
+                    <contenido_periodico informacion=""></contenido_periodico>
+                </seccion_periodico>
+            </secciones_periodico>
+            <indice_periodico></indice_periodico>
+        </periodico>
+        <periodico tipo_clase="internacional" fecha_publicacion="">
+            <secciones_periodico>
+                <seccion_periodico tipo_seccion="economica">
+                    <articulo autor=""></articulo>
+                    <contenido_periodico informacion=""></contenido_periodico>
+                </seccion_periodico>
+            </secciones_periodico>
+            <indice_periodico></indice_periodico>
+        </periodico>
+    </periodicos>
+  </documentos>
+</biblioteca>
