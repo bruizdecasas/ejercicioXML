@@ -1,18 +1,63 @@
-<biblioteca xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation= "biblioteca.xsd">
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE biblioteca[
+	<!ELEMENT biblioteca (documentos+)>
+        <!ELEMENT documentos (libros,revistas,periodicos)>
+            <!ELEMENT libros (libro+)>
+            <!ELEMENT libro (titulo_libro,capitulos,indice_libro,sinopsis)>
+                <!ATTLIST libro id ID #REQUIRED>   
+                <!ATTLIST libro tipo_clase CDATA #REQUIRED>
+                <!ATTLIST libro numero_paginas CDATA #REQUIRED>
+                <!ELEMENT titulo_libro (#PCDATA)>
+                <!ELEMENT capitulos (capitulo+)>
+                <!ELEMENT capitulo (titulo_capitulo,contenido_capitulo)>
+                    <!ATTLIST capitulo numero_paginas CDATA #REQUIRED>
+                    <!ELEMENT titulo_capitulo (#PCDATA)>
+                    <!ELEMENT contenido_capitulo (#PCDATA)>
+                    <!ATTLIST contenido_capitulo enlace CDATA #REQUIRED>
+                <!ELEMENT indice_libro (#PCDATA)>
+                <!ELEMENT sinopsis (#PCDATA)>
+            <!ELEMENT revistas (revista+)>
+            <!ELEMENT revista (titulo_revista,numero,indice_revista,secciones_revista)>
+                <!ATTLIST revista id ID #REQUIRED>
+                <!ATTLIST revista tipo_clase CDATA #REQUIRED>
+                <!ATTLIST revista numero_paginas CDATA #REQUIRED>
+                <!ELEMENT titulo_revista (#PCDATA)>
+                <!ELEMENT numero (#PCDATA)>
+                <!ELEMENT indice_revista (#PCDATA)>
+                <!ELEMENT secciones_revista (seccion_revista+)>
+                    <!ELEMENT seccion_revista (contenido_revista)>
+                    <!ATTLIST seccion_revista numero_paginas CDATA #REQUIRED>
+                        <!ELEMENT contenido_revista (#PCDATA)>
+                        <!ATTLIST contenido_revista enlace CDATA #REQUIRED>
+            <!ELEMENT periodicos (periodico+)>
+            <!ELEMENT periodico (secciones_periodico,indice_periodico)>
+                <!ATTLIST periodico id ID #REQUIRED>
+                <!ATTLIST periodico tipo_clase CDATA #REQUIRED>
+                <!ATTLIST periodico fecha_publicacion CDATA #REQUIRED>
+                <!ELEMENT secciones_periodico (seccion_periodico+)>
+                    <!ELEMENT seccion_periodico (articulo*,contenido_periodico)>
+                    <!ATTLIST seccion_periodico tipo_seccion CDATA #REQUIRED>
+                        <!ELEMENT articulo (#PCDATA)>   
+                        <!ATTLIST articulo autor CDATA #REQUIRED>
+                        <!ELEMENT contenido_periodico (#PCDATA)>
+                        <!ATTLIST contenido_periodico informacion CDATA #REQUIRED>
+                <!ELEMENT indice_periodico (#PCDATA)>
+]>
+<biblioteca>  
   <documentos>
-    <libros id="L-0000">
-        <libro tipo_clase="novela" numero_paginas="">
+        <libros>
+        <libro id="L-0001" tipo_clase="novela" numero_paginas="">
            <titulo_libro></titulo_libro>
            <capitulos>
                <capitulo numero_paginas="0">
-                   <titulo_capítulo></título_capítulo>
-                   <contenido_capítulo enlace=""></contenido_capitulo> 
+                   <titulo_capitulo></titulo_capitulo>
+                   <contenido_capitulo enlace=""></contenido_capitulo> 
                 </capitulo>
             </capitulos>
            <indice_libro></indice_libro>
            <sinopsis></sinopsis>
         </libro>
-        <libro tipo_clase="infantil" numero_paginas="0">
+        <libro id="L-0002" tipo_clase="infantil" numero_paginas="0">
             <titulo_libro></titulo_libro>
             <capitulos>
                 <capitulo numero_paginas="0">
@@ -23,7 +68,7 @@
             <indice_libro></indice_libro>
             <sinopsis></sinopsis>
         </libro>
-        <libro tipo_clase="didactico" numero_paginas="0">
+        <libro id="L-0003" tipo_clase="didactico" numero_paginas="0">
             <titulo_libro></titulo_libro>
             <capitulos>
                 <capitulo numero_paginas="0">
@@ -34,9 +79,9 @@
             <indice_libro></indice_libro>
             <sinopsis></sinopsis>
         </libro>
-    </libros>
-    <revistas id="R000">
-        <revista tipo_clase="informatica" numero_paginas="0">
+        </libros>
+        <revistas>
+        <revista id="R001" tipo_clase="informatica" numero_paginas="0">
             <titulo_revista></titulo_revista>
             <numero></numero>
             <indice_revista></indice_revista>
@@ -46,17 +91,7 @@
                 </seccion_revista>
             </secciones_revista>
         </revista> 
-        <revista tipo_clase="corazon" numero_paginas="0">
-            <titulo_revista></titulo_revista>
-            <numero></numero>
-            <indice_revista></indice_revista>
-            <secciones_revista>
-                <seccion_revista numero_paginas="0">
-                    <contenido_revista enlace=""></contenido_revista>
-                </sección_revista>
-            </secciones_revista>
-        </revista>
-        <revista tipo_clase="coches" numero_paginas="0">
+        <revista id="R002" tipo_clase="corazon" numero_paginas="0">
             <titulo_revista></titulo_revista>
             <numero></numero>
             <indice_revista></indice_revista>
@@ -66,7 +101,7 @@
                 </seccion_revista>
             </secciones_revista>
         </revista>
-        <revista tipo_clase="investigacion" numero_paginas="0">
+        <revista id="R003" tipo_clase="coches" numero_paginas="0">
             <titulo_revista></titulo_revista>
             <numero></numero>
             <indice_revista></indice_revista>
@@ -76,7 +111,7 @@
                 </seccion_revista>
             </secciones_revista>
         </revista>
-        <revista tipo_clase="otras" numero_paginas="0">
+        <revista id="R004" tipo_clase="investigacion" numero_paginas="0">
             <titulo_revista></titulo_revista>
             <numero></numero>
             <indice_revista></indice_revista>
@@ -86,9 +121,19 @@
                 </seccion_revista>
             </secciones_revista>
         </revista>
-    </revistas>
-    <periodicos id="P-0000">
-        <periodico tipo_clase="nacional" fecha_publicacion="">
+        <revista id="R005" tipo_clase="otras" numero_paginas="0">
+            <titulo_revista></titulo_revista>
+            <numero></numero>
+            <indice_revista></indice_revista>
+            <secciones_revista>
+                <seccion_revista numero_paginas="0">
+                    <contenido_revista enlace=""></contenido_revista>
+                </seccion_revista>
+            </secciones_revista>
+        </revista>
+        </revistas>
+        <periodicos>
+        <periodico id="P-0001" tipo_clase="nacional" fecha_publicacion="">
             <secciones_periodico>
                 <seccion_periodico tipo_seccion="opinion">
                     <articulo autor=""></articulo>
@@ -97,7 +142,7 @@
             </secciones_periodico>
             <indice_periodico></indice_periodico>
         </periodico>
-         <periodico tipo_clase="nacional" fecha_publicacion="">
+         <periodico id="P-0002" tipo_clase="nacional" fecha_publicacion="">
             <secciones_periodico>
                 <seccion_periodico tipo_seccion="deportes">
                     <articulo autor=""></articulo>
@@ -106,7 +151,7 @@
             </secciones_periodico>
             <indice_periodico></indice_periodico>
         </periodico>
-        <periodico tipo_clase="internacional" fecha_publicacion="">
+        <periodico id="P-0003" tipo_clase="internacional" fecha_publicacion="">
             <secciones_periodico>
                 <seccion_periodico tipo_seccion="economica">
                     <articulo autor=""></articulo>
@@ -115,6 +160,6 @@
             </secciones_periodico>
             <indice_periodico></indice_periodico>
         </periodico>
-    </periodicos>
+        </periodicos>
   </documentos>
 </biblioteca>
