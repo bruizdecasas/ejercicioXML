@@ -147,12 +147,16 @@
                 </secciones_revista>
             </revista>
             <revista id="R002" tipo_clase="corazon" numero_paginas="0">
-                <titulo_revista></titulo_revista>
-                <numero></numero>
+                <titulo_revista>Hola</titulo_revista>
+                <numero>10</numero>
                 <indice_revista></indice_revista>
                 <secciones_revista>
-                    <seccion_revista numero_paginas="0">
-                        <contenido_revista enlace=""></contenido_revista>
+                    <seccion_revista numero_paginas="50">
+                        <contenido_revista enlace="https://www.hola.com/">
+                            Número 1 en actualidad y tendencias de moda, belleza y estilo de vida. 
+                            Noticias diarias sobre las estrellas de cine, la música, tendencias de moda, 
+                            consejos de belleza, recetas de cocina, estilo...
+                        </contenido_revista>
                     </seccion_revista>
                 </secciones_revista>
             </revista>
